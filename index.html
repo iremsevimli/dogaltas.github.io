@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Stones | Doğal Taş & Özgün El İşçiliği Atölyesi</title>
+    <meta name="description" content="Doğal taşların çakra enerjileri ile uyumu, el işçiliği ahşap ve taş tasarımlar. Atölyemizden kapınıza uzanan zarafet.">
+    <!-- Google Fonts: Cinzel (Mistik/Klasik) & Outfit (Modern/Temiz) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigasyon -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">Aura</span>Stones
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Giriş</a>
+                <a href="#about" class="nav-link">Atölyemiz</a>
+                <a href="#shop" class="nav-link">Mağaza</a>
+                <a href="#custom-order" class="nav-link">Özel Sipariş</a>
+                <a href="#contact" class="nav-link">İletişim</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartToggle" aria-label="Sepeti Aç">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Alışveriş Sepeti Çekmecesi (Sliding Cart Drawer) -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Sepetiniz</h3>
+            <button class="close-cart-btn" id="cartClose" aria-label="Sepeti Kapat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-items" id="cartItems">
+            <!-- Sepet elemanları dinamik yüklenecek -->
+            <div class="empty-cart-message">
+                <i class="fa-solid fa-gem"></i>
+                <p>Sepetiniz şu anda boş.</p>
+                <a href="#shop" class="btn btn-outline" id="startShopping">Alışverişe Başla</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Toplam Tutar:</span>
+                <span class="cart-total-amount" id="cartTotal">0.00 TL</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">Siparişi Tamamla (WhatsApp)</button>
+        </div>
+    </div>
+
+    <!-- Kahraman (Hero) Alanı -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('assets/images/hero_workshop.jpg');"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Doğadan İlham Alan Zanaat</span>
+                <h1 class="hero-title">Ruhunuza Dokunan <br><span class="highlight">Doğal Taşlar</span></h1>
+                <p class="hero-desc">Atölyemizde ham mineralleri özenle işliyor, ahşap ve taş zanaatıyla harmanlayarak çakra enerjilerinizi dengeleyecek eşsiz takılar ve objeler tasarlıyoruz.</p>
+                <div class="hero-actions">
+                    <a href="#shop" class="btn btn-primary">Koleksiyonu Keşfet</a>
+                    <a href="#about" class="btn btn-outline">Hikayemiz</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Aşağı Kaydır</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- Atölye ve Site Tanıtımı (About) -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Zanaatin Kalbi</span>
+                <h2>Atölyemizin Hikayesi</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/hero_workshop.jpg" alt="Atölye Çalışma Ortamı" class="about-img">
+                    <div class="experience-badge">
+                        <span class="exp-num">10+</span>
+                        <span class="exp-text">Yıllık El Emeği</span>
+                    </div>
+                </div>
+                <div class="about-text-content">
+                    <h3>Ham Doğadan Tasarıma Yolculuk</h3>
+                    <p>Aura Stones olarak, dünyanın derinliklerinden gelen eşsiz mineralleri özgün tasarımlara dönüştürüyoruz. Atölyemizde sadece taşları işlemiyor, her bir taşa hak ettiği saygıyı ve işçiliği gösteriyoruz.</p>
+                    <p>Geleneksel ahşap oyma tekniklerini modern taş kakma sanatıyla birleştirerek, evinizde veya üzerinizde taşıyabileceğiniz enerjik sanat eserleri yaratıyoruz. Kullandığımız tüm ham taşlar etik kaynaklardan elde edilmekte olup, her bir parçanın çakra titreşimlerini korumasına özen gösteriyoruz.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-hands"></i></div>
+                            <div>
+                                <h4>%100 El İşçiliği</h4>
+                                <p>Her ürün tek tek el işçiliğiyle, seri üretim kullanılmadan üretilir.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-infinity"></i></div>
+                            <div>
+                                <h4>Çakra Enerji Uyumu</h4>
+                                <p>Taşlarımızı vücudun enerji merkezleri olan çakralarla eşleştirerek tasarlıyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Çok Satan Ürünler Şeridi (Best Sellers) -->
+    <section class="bestsellers-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Popüler Tercihler</span>
+                <h2>En Çok Satan Ürünlerimiz</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="bestsellers-grid" id="bestsellersGrid">
+                <!-- Dinamik olarak doldurulacak -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mağaza ve Kategoriler (Shop & Chakra Filtering) -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Koleksiyonlar</span>
+                <h2>Ürünlerimizi Keşfedin</h2>
+                <p class="section-subtitle">Ürünlerin üzerindeki renkler çakralarla olan enerji uyumlarını temsil eder. İstediğiniz çakra veya ürün kategorisini seçerek filtreleyebilirsiniz.</p>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- Çakra Filtreleri (Category / Chakra Selectors) -->
+            <div class="chakra-filters-container">
+                <div class="chakra-filters-track">
+                    <button class="chakra-filter-btn active" data-filter="all">
+                        <span class="chakra-dot" style="background: linear-gradient(45deg, #ddd, #999);"></span>
+                        Tümü
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="ham-taslar">
+                        <span class="chakra-dot root-chakra"></span>
+                        Ham Taşlar <small>(Kök Çakra)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="islenmis-taslar">
+                        <span class="chakra-dot sacral-chakra"></span>
+                        İşlenmiş Taşlar <small>(Sakral Çakra)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="yuzukler">
+                        <span class="chakra-dot solar-chakra"></span>
+                        Yüzükler <small>(Solar Pleksus)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="kolyeler">
+                        <span class="chakra-dot heart-chakra"></span>
+                        Kolyeler <small>(Kalp Çakrası)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="bileklikler">
+                        <span class="chakra-dot throat-chakra"></span>
+                        Bileklikler <small>(Boğaz Çakrası)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="tas-isciligi">
+                        <span class="chakra-dot third-eye-chakra"></span>
+                        Taş İşçiliği <small>(Üçüncü Göz)</small>
+                    </button>
+                    <button class="chakra-filter-btn" data-filter="ahsap-isciligi">
+                        <span class="chakra-dot crown-chakra"></span>
+                        Ahşap İşçiliği <small>(Tepe Çakrası)</small>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün Grid / Liste -->
+            <div class="product-grid" id="productGrid">
+                <!-- JS ile dinamik olarak doldurulacaktır -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Özel Sipariş Alanı (Custom Order Request) -->
+    <section class="custom-order-section" id="custom-order">
+        <div class="container">
+            <div class="custom-order-grid">
+                <div class="custom-order-info">
+                    <span class="section-tagline">Size Özel Tasarım</span>
+                    <h2>Kendi Enerjinizi Tasarlayın</h2>
+                    <p>Doğum haritanıza, burcunuza veya dengelemek istediğiniz çakra enerjisine özel olarak kolye, bileklik veya ahşap-taş kakmalı kutular tasarlayabiliriz. İhtiyacınız olan taşları birlikte seçelim ve atölyemizde sizin için el emeğiyle hazırlayalım.</p>
+                    <ul class="custom-list">
+                        <li><i class="fa-solid fa-check"></i> Kişiye özel çakra analizi ve taş seçimi</li>
+                        <li><i class="fa-solid fa-check"></i> İstenilen ölçü, ahşap türü ve gümüş ayarı</li>
+                        <li><i class="fa-solid fa-check"></i> Tasarım aşamasında atölyeden fotoğraf/video güncellemeleri</li>
+                    </ul>
+                </div>
+                <div class="custom-order-form-container">
+                    <form class="custom-form" id="customDesignForm">
+                        <div class="form-group">
+                            <label for="clientName">Adınız Soyadınız</label>
+                            <input type="text" id="clientName" required placeholder="Örn. Ahmet Yılmaz">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientContact">Telefon Numarası / WhatsApp</label>
+                            <input type="tel" id="clientContact" required placeholder="Örn. 0555 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="designType">Tasarım Türü</label>
+                            <select id="designType" required>
+                                <option value="" disabled selected>Seçiniz...</option>
+                                <option value="Bileklik">Kişiye Özel Çakra Bilekliği</option>
+                                <option value="Kolye">Gümüş Kakma Doğal Taş Kolye</option>
+                                <option value="Yuzuk">Özel Tasarım Yüzük</option>
+                                <option value="Kutu">Ahşap & Taş Kakma Mücevher Kutusu</option>
+                                <option value="Diger">Diğer Sanatsal Objeler</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientMessage">Hayalinizdeki Tasarımı Anlatın</label>
+                            <textarea id="clientMessage" rows="4" placeholder="Hangi çakraya odaklanmak istersiniz? Tercih ettiğiniz ahşap veya taşlar nelerdir?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">WhatsApp ile Talebi Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü (Contact) -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Bize Ulaşın</span>
+                <h2>Atölyemize Davetlisiniz</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Atölye Adresi</h3>
+                    <p>Zanaatkarlar Sanayi Sitesi, B Blok No: 12<br>Kadıköy / İstanbul</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Müşteri Hattı & WhatsApp</h3>
+                    <p><a href="https://wa.me/905551234567" target="_blank">+90 (555) 123 45 67</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>E-posta Adresi</h3>
+                    <p><a href="mailto:info@aurastones.com">info@aurastones.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ürün Detay Modalı (Product Detail Modal) -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose" aria-label="Detay Kapat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content-wrapper" id="modalContent">
+                <!-- JS ile dinamik olarak doldurulacaktır -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><span class="logo-accent">Aura</span>Stones</a>
+                <p class="footer-desc">Doğanın en saf enerjilerini el işçiliğiyle hayata geçiriyor, şifalı taşları estetikle buluşturuyoruz.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Hızlı Menü</h4>
+                <a href="#home">Giriş</a>
+                <a href="#about">Atölyemiz</a>
+                <a href="#shop">Ürünler</a>
+                <a href="#custom-order">Özel Sipariş</a>
+            </div>
+            <div class="footer-links">
+                <h4>Kategoriler</h4>
+                <a href="#shop" class="footer-cat-link" data-filter="ham-taslar">Ham Taşlar</a>
+                <a href="#shop" class="footer-cat-link" data-filter="islenmis-taslar">İşlenmiş Taşlar</a>
+                <a href="#shop" class="footer-cat-link" data-filter="kolyeler">Kolyeler</a>
+                <a href="#shop" class="footer-cat-link" data-filter="bileklikler">Bileklikler</a>
+                <a href="#shop" class="footer-cat-link" data-filter="ahsap-isciligi">Ahşap İşçiliği</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura Stones. Tüm Hakları Saklıdır. Designed with energy & passion.</p>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="app.js"></script>
+</body>
+</html>
